@@ -6,7 +6,7 @@
     <title>Expense Tracker</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="1.css">
 </head>
 <body>
 
@@ -301,78 +301,82 @@
 
     <!-- Analytics Page -->
 
-
-    <div class="graph-section hide">
-
-        <p class="graph-title">Graphical Analysis</p>
-
-        <div class="stats-overlay">
-            <div class="stat-row">
-                <span>Net Income :</span>
-                <span class="net-income"></span>
+    <div class="graph-con">
+    
+    
+        <div class="graph-section hide">
+    
+            <p class="graph-title">Graphical Analysis</p>
+    
+            <div class="stats-overlay">
+                <div class="stat-row">
+                    <span>Net Income :</span>
+                    <span class="net-income"></span>
+                </div>
+                <div class="stat-row">
+                    <span>Expenses Rate :</span>
+                    <span class="expense-rate"></span>
+                </div>
+                <div class="stat-row">
+                    <span>Investment Rate :</span>
+                    <span class="investment-rate"></span>
+                </div>
+                <div class="stat-row">
+                    <span>Final Balance :</span>
+                    <span class="current-amount"></span>
+                </div>
             </div>
-            <div class="stat-row">
-                <span>Expenses Rate :</span>
-                <span class="expense-rate"></span>
-            </div>
-            <div class="stat-row">
-                <span>Investment Rate :</span>
-                <span class="investment-rate"></span>
-            </div>
-            <div class="stat-row">
-                <span>Final Balance :</span>
-                <span class="current-amount"></span>
+    
+            <div class="graph-wrapper">
+    
+                <div class="y-axis"></div>
+    
+                <div class="bar-graph">
+    
+                    <!-- Income Bar -->
+                    <div class="bar-group">
+                        <div class="bar-wrapper">
+                            <div class="bar income-bar">
+                                <span class="bar-label hide"></span>
+                            </div>
+                        </div>
+                        <p class="bar-title">Income</p>
+                    </div>
+    
+                    <!-- Expenses Bar -->
+                    <div class="bar-group">
+                        <div class="bar-wrapper">
+                            <div class="bar expense-bar">
+                                <span class="bar-label hide"></span>
+                            </div>
+                        </div>
+                        <p class="bar-title">Expenses</p>
+                    </div>
+    
+                    <!-- Investments Bar -->
+                    <div class="bar-group">
+                        <div class="bar-wrapper">
+                            <div class="bar investment-bar">
+                                <span class="bar-label hide"></span>
+                            </div>
+                        </div>
+                        <p class="bar-title">Investments</p>
+                    </div>
+    
+                    <!-- Current Balance Bar -->
+                    <div class="bar-group">
+                        <div class="bar-wrapper">
+                            <div class="bar current-bar">
+                                <span class="bar-label hide"></span>
+                            </div>
+                        </div>
+                        <p class="bar-title final-bar-title">Final Balance</p>
+                    </div>
+    
+                </div>
             </div>
         </div>
-
-        <div class="graph-wrapper">
-
-            <div class="y-axis"></div>
-
-            <div class="bar-graph">
-
-                <!-- Income Bar -->
-                <div class="bar-group">
-                    <div class="bar-wrapper">
-                        <div class="bar income-bar">
-                            <span class="bar-label hide"></span>
-                        </div>
-                    </div>
-                    <p class="bar-title">Income</p>
-                </div>
-
-                <!-- Expenses Bar -->
-                <div class="bar-group">
-                    <div class="bar-wrapper">
-                        <div class="bar expense-bar">
-                            <span class="bar-label hide"></span>
-                        </div>
-                    </div>
-                    <p class="bar-title">Expenses</p>
-                </div>
-
-                <!-- Investments Bar -->
-                <div class="bar-group">
-                    <div class="bar-wrapper">
-                        <div class="bar investment-bar">
-                            <span class="bar-label hide"></span>
-                        </div>
-                    </div>
-                    <p class="bar-title">Investments</p>
-                </div>
-
-                <!-- Current Balance Bar -->
-                <div class="bar-group">
-                    <div class="bar-wrapper">
-                        <div class="bar current-bar">
-                            <span class="bar-label hide"></span>
-                        </div>
-                    </div>
-                    <p class="bar-title final-bar-title">Final Balance</p>
-                </div>
-
-            </div>
-        </div>
+    
     </div>
 
     <script type="module" src="script.js"></script>
