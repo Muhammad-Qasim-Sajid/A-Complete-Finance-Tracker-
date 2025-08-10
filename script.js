@@ -989,7 +989,8 @@ function updateBar(clas, value) {
 
     bar.style.height = `${heightPercent}%`;
     
-    let BARWIDTH = window.getComputedStyle(document.querySelector(".bar")).width >= "70px";
+    let barWidth = parseFloat(window.getComputedStyle(document.querySelector(".bar")).width);
+    let BARWIDTH = barWidth >= 70;
 
     if(heightPercent > 15 && financeData.income <=10000000 && financeData.expenses <=10000000 && financeData.investments <=10000000 && financeData.current <=10000000 && BARWIDTH){
        bar.querySelector(".bar-label").classList.remove("hide");
