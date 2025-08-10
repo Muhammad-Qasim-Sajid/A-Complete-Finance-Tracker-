@@ -4,7 +4,7 @@ A comprehensive web-based expense tracking application that helps you manage you
 
 ## Link of Finance Tracker
 
-![Main Interface](https://finance-tracker-by-qasim.netlify.app/)
+[Finance Tracker / Cash Flower](https://finance-tracker-by-qasim.netlify.app/)
 
 ## Screenshot
 
