@@ -1255,7 +1255,7 @@ body {
     }
 
     .bar-graph::before {
-        width: 250px;
+        width: 220px;
     }
 
     .bar-wrapper {
