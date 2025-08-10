@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+
+    <input type="checkbox" id="mobile-menu-toggle" class="mobile-menu-toggle">
+    
+    <div class="nav-bar-div">
+
+        <p class="name">Cash Flower</p>
+    
+        <label for="mobile-menu-toggle" class="hamburger-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+    
+       
+        <nav class="nav-bar">
+            <p class="dashboard">Dashboard</p>
+            <p class="incomes">Incomes</p>
+            <p class="expenses">Expenses</p>
+            <p class="investments">Investments</p>
+            <p class="analytics">Analytics</p>
+        </nav>
+
+    </div>
+
+    <div class="welcome-message">
+        <p>
+            Welcome to Cash Flower. Use the navigation bar to access menus. Start by adding income, then track your
+            expenses, investments, and view insights on your dashboard.
+        </p>
+    </div>
+
+
+    <!-- Dashboard Page -->
+     
+
+    <div class="dashboard-hider hide">
+
+    <div class="current-balance-container">
+        <div class="current-balance-div">
+            <i class="fa-solid fa-coins coins"></i>
+            <div class="actual-amount">
+               <p class="current-balance-text">Final Balance</p>
+               <p class="current-balance">Currency 0</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="boxes">
+        <div class="total-income-container">
+            <div class="total-income-div">
+                <p class="total-income-text">Total Income</p>
+                <p class="currency-code currency-code-income">Currency</p>
+                <p class="total-income">0</p>
+            </div>
+        </div>
+
+        <div class="total-expense-container">
+            <div class="total-expense-div">
+                <p class="total-expense-text">Total Expense</p>
+                <p class="currency-code currency-code-expense">Currency</p>
+                <p class="total-expense">0</p>
+            </div>
+        </div>
+
+        <div class="total-investment-container">
+            <div class="total-investment-div">
+                <p class="total-investment-text">Total Investment</p>
+                <p class="currency-code currency-code-investment">Currency</p>
+                <p class="total-investment">0</p>
+            </div>
+        </div>
+    </div> 
+    
+    </div>
+
+
+    <!-- Incomes Page -->
+
+
+    <div class="incomes-container container hide">
+
+        <div class="side-bar">
+            <p class="incomes-text side-bar-text">Incomes</p>
+            <button class="add-incomes-btn add-btn-side-bar">ADD</button>
+            <p class="select-currency">Select Currency</p>
+            <div class="currency-selecter-div">
+                <select class="currency-selecter"></select>
+            </div>
+        </div>
+
+        <div class="incomes-slides slides">
+            
+            <!-- <div class="slide">
+                <p class="incomes-name name-of-activity">Job</p>
+                <p class="incomes-amount amount-of-activity">100,000 PKR</p>
+                <div class="btns-of-incomes edit-del-btns">
+                   <button class="incomes-edit-btn edit-btn">Edit</button>
+                   <button class="incomes-delete-btn del-btn">Delete</button> 
+                </div> 
+            </div> -->
+
+        </div>
+
+    </div>
+
+    <div class="overlay hide"></div>
+
+    <div class="edit-incomes-window window hide">
+
+        <div class="upper-section-edit-incomes-window upper-section">
+            <p class="upper-section-edit-incomes upper-section-text">EDIT INCOME</p>
+            <p class="upper-section-edit-incomes-cross upper-section-cross">✖</p>
+        </div>
+
+        <div class="edit-incomes-name-input name-input">
+            <p class="name-edit-incomes-window name-of-input">Name</p>
+            <input type="text" class="input-edit-incomes-window input-itself">
+        </div>
+
+        <div class="incomes-edit-amount-input name-input">
+            <p class="amount-text-edit-incomes-window name-of-input">Amount</p>
+            <input type="text" class="amount-edit-incomes-window input-itself">
+        </div>
+
+        <button class="save-edit-incomes-window save-btn">Save</button>
+
+    </div>
+
+    <div class="add-incomes-window window hide">
+
+        <div class="upper-section-add-incomes-window upper-section">
+            <p class="upper-section-incomes upper-section-text">ADD INCOME</p>
+            <p class="upper-section-incomes-cross upper-section-cross">✖</p>
+        </div>
+
+        <div class="incomes-name-input name-input">
+            <p class="name-add-incomes-window name-of-input">Name</p>
+            <input type="text" class="input-add-incomes-window input-itself">
+        </div>
+
+        <div class="incomes-amount-input name-input">
+            <p class="amount-text-add-incomes-window name-of-input">Amount</p>
+            <input type="text" class="amount-add-incomes-window input-itself">
+        </div>
+
+        <button class="save-add-incomes-window save-btn">Save</button>
+
+    </div>
+
+
+    <!-- Expenses Page -->
+
+
+    <div class="expenses-container container hide">
+
+        <div class="side-bar">
+            <p class="expenses-text side-bar-text">Expenses</p>
+            <button class="add-expenses-btn add-btn-side-bar">ADD</button>
+            <p class="select-currency">Select Currency from Incomes Menu.</p>
+        </div>
+
+        <div class="expenses-slides slides">
+
+            <!-- <div class="slide">
+                <p class="expenses-name name-of-activity">Food</p>
+                <p class="expenses-amount amount-of-activity">100,000 PKR</p>
+                <div class="btns-of-expenses edit-del-btns">
+                   <button class="expenses-edit-btn edit-btn">Edit</button>
+                   <button class="expenses-delete-btn del-btn">Delete</button> 
+                </div> 
+            </div> -->
+
+        </div>
+
+    </div>
+
+    <div class="edit-expenses-window window hide">
+
+        <div class="upper-section-edit-expenses-window upper-section">
+            <p class="upper-section-edit-expenses upper-section-text">EDIT EXPENSE</p>
+            <p class="upper-section-edit-expenses-cross upper-section-cross">✖</p>
+        </div>
+
+        <div class="edit-expenses-name-input name-input">
+            <p class="name-edit-expenses-window name-of-input">Name</p>
+            <input type="text" class="input-edit-expenses-window input-itself">
+        </div>
+
+        <div class="expenses-edit-amount-input name-input">
+            <p class="amount-text-edit-expenses-window name-of-input">Amount</p>
+            <input type="text" class="amount-edit-expenses-window input-itself">
+        </div>
+
+        <button class="save-edit-expenses-window save-btn">Save</button>
+
+    </div>
+
+    <div class="add-expenses-window window hide">
+
+        <div class="upper-section-add-expenses-window upper-section">
+            <p class="upper-section-expenses upper-section-text">ADD EXPENSE</p>
+            <p class="upper-section-expenses-cross upper-section-cross">✖</p>
+        </div>
+
+        <div class="expenses-name-input name-input">
+            <p class="name-add-expenses-window name-of-input">Name</p>
+            <input type="text" class="input-add-expenses-window input-itself">
+        </div>
+
+        <div class="expenses-amount-input name-input">
+            <p class="amount-text-add-expenses-window name-of-input">Amount</p>
+            <input type="text" class="amount-add-expenses-window input-itself">
+        </div>
+
+        <button class="save-add-expenses-window save-btn">Save</button>
+
+    </div>
+
+
+    <!-- Investments Page -->
+
+
+    <div class="investments-container container hide">
+
+        <div class="side-bar">
+            <p class="investments-text side-bar-text">Investments</p>
+            <button class="add-investments-btn add-btn-side-bar">ADD</button>
+            <p class="select-currency">Select Currency from Incomes Menu.</p>
+        </div>
+
+        <div class="investments-slides slides">
+
+            <!-- <div class="slide">
+                <p class="investments-name name-of-activity">House</p>
+                <p class="investments-amount amount-of-activity">100,000 PKR</p>
+                <div class="btns-of-investments edit-del-btns">
+                   <button class="investments-edit-btn edit-btn">Edit</button>
+                   <button class="investments-delete-btn del-btn">Delete</button> 
+                </div> 
+            </div> -->
+
+        </div>
+
+    </div>
+
+    <div class="edit-investments-window window hide">
+
+        <div class="upper-section-edit-investments-window upper-section">
+            <p class="upper-section-edit-investments upper-section-text">EDIT INVESTMENTS</p>
+            <p class="upper-section-edit-investments-cross upper-section-cross">✖</p>
+        </div>
+
+        <div class="edit-investments-name-input name-input">
+            <p class="name-edit-investments-window name-of-input">Name</p>
+            <input type="text" class="input-edit-investments-window input-itself">
+        </div>
+
+        <div class="investments-edit-amount-input name-input">
+            <p class="amount-text-edit-investments-window name-of-input">Amount</p>
+            <input type="text" class="amount-edit-investments-window input-itself">
+        </div>
+
+        <button class="save-edit-investments-window save-btn">Save</button>
+
+    </div>
+
+    <div class="add-investments-window window hide">
+
+        <div class="upper-section-add-investments-window upper-section">
+            <p class="upper-section-investments upper-section-text">ADD INVESTMENTS</p>
+            <p class="upper-section-investments-cross upper-section-cross">✖</p>
+        </div>
+
+        <div class="investments-name-input name-input">
+            <p class="name-add-investments-window name-of-input">Name</p>
+            <input type="text" class="input-add-investments-window input-itself">
+        </div>
+
+        <div class="investments-amount-input name-input">
+            <p class="amount-text-add-investments-window name-of-input">Amount</p>
+            <input type="text" class="amount-add-investments-window input-itself">
+        </div>
+
+        <button class="save-add-investments-window save-btn">Save</button>
+
+    </div>
+
+
+    <!-- Analytics Page -->
+
+
+    <div class="graph-section hide">
+
+        <p class="graph-title">Graphical Analysis</p>
+
+        <div class="stats-overlay">
+            <div class="stat-row">
+                <span>Net Income :</span>
+                <span class="net-income"></span>
+            </div>
+            <div class="stat-row">
+                <span>Expenses Rate :</span>
+                <span class="expense-rate"></span>
+            </div>
+            <div class="stat-row">
+                <span>Investment Rate :</span>
+                <span class="investment-rate"></span>
+            </div>
+            <div class="stat-row">
+                <span>Final Balance :</span>
+                <span class="current-amount"></span>
+            </div>
+        </div>
+
+        <div class="graph-wrapper">
+
+            <div class="y-axis"></div>
+
+            <div class="bar-graph">
+
+                <!-- Income Bar -->
+                <div class="bar-group">
+                    <div class="bar-wrapper">
+                        <div class="bar income-bar">
+                            <span class="bar-label hide"></span>
+                        </div>
+                    </div>
+                    <p class="bar-title">Income</p>
+                </div>
+
+                <!-- Expenses Bar -->
+                <div class="bar-group">
+                    <div class="bar-wrapper">
+                        <div class="bar expense-bar">
+                            <span class="bar-label hide"></span>
+                        </div>
+                    </div>
+                    <p class="bar-title">Expenses</p>
+                </div>
+
+                <!-- Investments Bar -->
+                <div class="bar-group">
+                    <div class="bar-wrapper">
+                        <div class="bar investment-bar">
+                            <span class="bar-label hide"></span>
+                        </div>
+                    </div>
+                    <p class="bar-title">Investments</p>
+                </div>
+
+                <!-- Current Balance Bar -->
+                <div class="bar-group">
+                    <div class="bar-wrapper">
+                        <div class="bar current-bar">
+                            <span class="bar-label hide"></span>
+                        </div>
+                    </div>
+                    <p class="bar-title final-bar-title">Final Balance</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>
