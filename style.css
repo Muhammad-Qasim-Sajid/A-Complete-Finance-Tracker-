@@ -354,8 +354,9 @@ body {
 }
 
 .window {
-    height: 70vh;
+    height: fit-content;
     width: 35vw;
+    padding-bottom: 4rem;
     background-color: white;
     top: 0px;
     left: 0px;
@@ -753,8 +754,7 @@ body {
     }
 
     .window {
-        width: 60vw;
-        height: 70vh;
+        width: 50vw;
     }
 
     .upper-section {
@@ -767,7 +767,8 @@ body {
     }
 
     .graph-title {
-        font-size: 15px;
+        font-size: 20px;
+        margin-left: 40px;
     }
 
     .graph-wrapper {
@@ -893,9 +894,7 @@ body {
     }
 
     .window {
-        width: 75vw;
-        height: 70vh;
-        transform: translateX(-50%) translateY(30%);
+        width: 60vw;
     }
 
     .graph-section {
@@ -905,9 +904,9 @@ body {
     }
 
     .graph-title {
-        font-size: 14px;
-        margin-left: 20px;
-        margin-top: 20px;
+        font-size: 20px;
+        margin-left: 30px;
+        margin-top: 25px;
     }
 
     .graph-wrapper {
@@ -1015,9 +1014,8 @@ body {
     }
 
     .window {
-        width: 80vw;
-        height: 65vh;
-        transform: translateX(-50%) translateY(35%);
+        width: 75vw;
+        margin-top: 30px;
     }
 
     .name-input {
@@ -1032,7 +1030,7 @@ body {
     }
 
     .graph-title {
-        font-size: 13px;
+        font-size: 16px;
         margin-left: 20px;
         margin-top: 20px;
     }
@@ -1210,9 +1208,8 @@ body {
     }
 
     .window {
-        width: 89vw;
-        height: 50vh;
-        transform: translateX(-50%) translateY(50%);
+        width: 80vw;
+        padding-bottom: 50px;
     }
 
     .upper-section {
@@ -1225,26 +1222,26 @@ body {
     }
 
     .name-input {
-        margin-top: 15px;
+        margin-top: 30px;
     }
 
     .save-btn {
         width: 75%;
-        margin-top: 30px;
+        margin-top: 45px;
     }
 
     .graph-section {
-        margin-top: 60px;
+        margin-top: 70px;
     }
 
     .graph-title {
-        font-size: 10px;
-        margin-left: 15px;
-        margin-top: 15px;
+        font-size: 16px;
+        margin-left: 25px;
+        margin-top: 20px;
     }
 
     .graph-wrapper {
-        transform: translateX(-80%) translateY(30%);
+        transform: translateX(-70%) translateY(30%);
         gap: 20px;
     }
 
@@ -1258,7 +1255,7 @@ body {
     }
 
     .bar-graph::before {
-        width: 230px;
+        width: 250px;
     }
 
     .bar-wrapper {
@@ -1278,9 +1275,8 @@ body {
 /* (295px - 320px) */
 @media (max-width: 319px) {
     .window {
-        width: 89vw;
-        height: 45vh;
-        transform: translateX(-50%) translateY(60%);
+        width: 90vw;
+        margin-top: 50px;
     }
 
     .upper-section {
@@ -1292,7 +1288,7 @@ body {
     }
 
     .name-input {
-        margin-top: 10px;
+        margin-top: 30px;
     }
 
     .save-btn {

@@ -1,6 +1,10 @@
-# Personal Finance Tracker
+# Personal Finance Tracker named as Cash Flower
 
 A comprehensive web-based expense tracking application that helps you manage your finances with ease. Built with vanilla JavaScript, HTML, and CSS, this app provides a complete solution for tracking income, expenses, and investments while offering detailed analytics and multi-currency support.
+
+## Link of Finance Tracker
+
+![Main Interface](https://finance-tracker-by-qasim.netlify.app/)
 
 ## Screenshot
 
